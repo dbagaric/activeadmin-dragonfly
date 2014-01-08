@@ -10,12 +10,12 @@ module ActiveAdmin
         #  require 'dragonfly/rails/images'
         #end
         # in any case we add the Dragonfly[:images] app as middleware
-        app.config.middleware.insert 1, 'Dragonfly::Middleware', :images
+        #app.config.middleware.insert 1, 'Dragonfly::Middleware', :images
 
-        app.config.assets.precompile += [
-          "active_admin/active_admin_dragonfly.js",
-          "active_admin/active_admin_dragonfly.css"
-        ]
+        #app.config.assets.precompile += [
+        #  "active_admin/active_admin_dragonfly.js",
+        #  "active_admin/active_admin_dragonfly.css"
+        #]
       end
 
       initializer "register stylesheets" do
