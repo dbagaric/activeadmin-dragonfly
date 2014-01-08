@@ -6,9 +6,9 @@ module ActiveAdmin
     class Engine < ::Rails::Engine
       initializer "Railsyard precompile hook", group: :all do |app|
         # check if someone already initialized Dragonfly for Rails
-        unless ActiveRecord::Base.methods.include? :image_accessor
-          require 'dragonfly/rails/images'
-        end
+        #unless ActiveRecord::Base.methods.include? :image_accessor
+        #  require 'dragonfly/rails/images'
+        #end
         # in any case we add the Dragonfly[:images] app as middleware
         app.config.middleware.insert 1, 'Dragonfly::Middleware', :images
 
